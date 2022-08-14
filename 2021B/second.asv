@@ -1,0 +1,21 @@
+clc, clear all, close all
+
+%% %导入A组
+x=xlsread('整理后.xlsx', '自变量1','A2:E75');
+x=[x(1:54,:);x(60:end,:)];
+yicun=xlsread('整理后.xlsx', '因变量1','A2:A75');
+yicun=[yicun(1:54,:);yicun(60:end,:)];
+c4=xlsread('整理后.xlsx', '因变量1','B2:B75');
+c4=[c4(1:54,:);c4(60:end,:)];
+y=[yicun,c4];
+%% % 导入B组
+
+%% %归一化
+t=x';
+t=mapminmax
+%% %计算
+xx=x;
+for i=1:5
+    for j=i:5
+        tem=x(:,i).*
+        xx=[xx,]
